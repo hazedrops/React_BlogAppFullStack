@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import ArticlesListPage from './pages/ArticlesListPage'
 import ArticlePage from './pages/ArticlePage'
+import NotFoundPage from "./pages/NotFoundPage"
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
 
             {/* Showing each article by adding URL parameter under articles directory */}
             <Route path='/articles/:articleId' element={<ArticlePage />} />
+            
+            {/* Display 'NotFoundPage' element on all routes, except for the paths already defined above */}
+            <Route path='*' element={<NotFoundPage />} />
           </Routes>
         </div>
       </div>
